@@ -109,7 +109,7 @@ class CkipSegmenter():
                         pos = 'None'
                 fin.append((word, pos))
             self.res = fin
-            self.tok, self.pos = zip(*fin)
+            self.tok, self.pos = map(list, zip(*fin))
 
         def num_patch(self, string):
             num_h = [chr(i) for i in range(48, 58)]
@@ -124,7 +124,7 @@ class CkipSegmenter():
             return output
 
         def __str__(self):
-            return '<SegResult {raw:.50} ...>'.format(raw=self.raw)
+            return '{raw}'.format(raw=self.raw)
 
         def __repr__(self):
             return '<SegResult {raw:.50} ...>'.format(raw=self.raw)
