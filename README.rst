@@ -20,6 +20,7 @@ Usage
 
 Summon a ``CkipSegmenter``
 -----------------------------------------------------------
+In[1]:
 
 .. code-block:: python
 
@@ -40,6 +41,7 @@ Summon a ``CkipSegmenter``
 
 The result object contains ``res``, ``tok`` and ``pos``
 -------------------------------------------------------
+In[2]:
 
 .. code-block:: python
 
@@ -52,6 +54,7 @@ The result object contains ``res``, ``tok`` and ``pos``
     print('result.pos: {}\n'.format(result.pos))
 
 
+Out[2]:
 
 .. parsed-literal::
 
@@ -65,11 +68,13 @@ The result object contains ``res``, ``tok`` and ``pos``
 
 Using ``batch_seg`` for a list of text would be slightly faster
 ---------------------------------------------------------------
+In[3]:
 
 .. code-block:: python
 
     segmenter.batch_seg(corpus)
 
+Out[3]:
 
 .. parsed-literal::
 
