@@ -1,13 +1,12 @@
 Ckip Segmenter
------------
-
-A Python client for the Chinese Word Segmentation System (see `ckipsvr.iis.sinica.edu.tw <http://ckipsvr.iis.sinica.edu.tw/>`_) provided by Academia Sinica Chinese Knowledge and Information Processing (CKIP) Group. The core was adapted from [amigcamel/PyCCS](https://github.com/amigcamel/PyCCS).
+==============
+A Python client for the Chinese Word Segmentation System (see `ckipsvr.iis.sinica.edu.tw <http://ckipsvr.iis.sinica.edu.tw/>`_) provided by Academia Sinica Chinese Knowledge and Information Processing (CKIP) Group. The core was adapted from `amigcamel/PyCCS <https://github.com/amigcamel/PyCCS>`_.
 
 Installation
------------
+============
 
-https://pypi.python.org/pypi/ckip-segmenter
 Simply run the following command:
+
 .. code-block:: sh
 
     pip install ckip-segmenter
@@ -17,12 +16,12 @@ If ``pip`` is not available, you can also `download it manually from PyPI <https
 *Note: Currently only Python 3+ is supported.*
 
 Usage
------------
+=====
 
 Summon a ``CkipSegmenter``
---------------------------
+-----------------------------------------------------------
 
-.. code:: ipython3
+.. code-block:: python
 
     from ckip import CkipSegmenter
     segmenter = CkipSegmenter()
@@ -42,7 +41,7 @@ Summon a ``CkipSegmenter``
 The result object contains ``res``, ``tok`` and ``pos``
 -------------------------------------------------------
 
-.. code:: ipython3
+.. code-block:: python
 
     result = segmenter.seg(text)
     # result.res is a list of tuples contain a token and its pos-tag.
@@ -67,7 +66,7 @@ The result object contains ``res``, ``tok`` and ``pos``
 Using ``batch_seg`` for a list of text would be slightly faster
 ---------------------------------------------------------------
 
-.. code:: ipython3
+.. code-block:: python
 
     segmenter.batch_seg(corpus)
 
@@ -75,10 +74,6 @@ Using ``batch_seg`` for a list of text would be slightly faster
 .. parsed-literal::
 
     8/8 collected.
-
-
-
-.. parsed-literal::
 
     [<SegResult  詞(Na) 是(SHI) 最(Dfa) 小(VH) 有(V_2) 意義(Na) 且(Cbb) 可以 ...>,
      <SegResult  任何(Neqa) 語言(Na) 處理(VC) 的(DE) 系統(Na) 都(D) 必須(D) 先能 ...>,
@@ -88,7 +83,5 @@ Using ``batch_seg`` for a list of text would be slightly faster
      <SegResult  找出(VC) 可能(D) 包含(VJ) 的(DE) 詞(Na) ，(COMMACATEGORY)  ...>,
      <SegResult  因此(Cbb) 多數(Neqa) 的(DE) 中文(Na) 分詞(Na) 程式(Na) 多(D)  ...>,
      <SegResult  而(Cbb) 較少(D) 討論(VE) 如何(D) 處理(VC) 詞典(Na) 中(Ng) 未(D ...>]
-
-
 
 
